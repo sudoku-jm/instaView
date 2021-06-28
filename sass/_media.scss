@@ -1,0 +1,24 @@
+
+@media all and (max-width:1400px){
+  .list_insta li{width:25%;}
+}
+@media all and (max-width:1024px){
+  .list_insta li{width:33.33%;}
+}
+@media all and (max-width:700px){
+  .layer_pop .layer_inner{width:100%;}
+}
+@media all and (max-width:640px){
+  .list_insta li>a{height:215px;}
+  .insta_pop{padding:15px;}
+}
+@media all and (max-width:414px){
+  .list_insta li{width:50%;}
+  .list_insta .insta_txt p{-webkit-line-clamp:8}
+}
+@media all and (max-width:375px){
+  .list_insta li{width:50%;}
+  .list_insta li>a{height:195px}
+}
+
+

@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  letter-spacing: -0.5px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  outline: 1;
+  text-decoration: none;
+  cursor: pointer;
+  color: #111;
+}
+
+/* text-align */
+.txtl {
+  text-align: left !important;
+}
+
+.txtr {
+  text-align: right !important;
+}
+
+.txtc {
+  text-align: center !important;
+}
+
+/*margin*/
+.mg0 {
+  margin: 0 !important;
+}
+
+.mg0auto {
+  margin: 0 auto !important;
+}
+
+.mgt30 {
+  margin-top: 30px !important;
+}
+
+.mgb60 {
+  margin-bottom: 60px !important;
+}
+
+/* 텍스트 숨김 */
+.hdtxt {
+  font-size: 0px;
+  line-height: 0px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.list_insta::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.list_insta li {
+  float: left;
+  width: 16.66%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.list_insta li:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.list_insta li > a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 266px;
+  overflow: hidden;
+}
+
+.list_insta li > a > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.list_insta li > a:hover .insta_txt, .list_insta li > a:focus .insta_txt {
+  opacity: 1;
+}
+
+.list_insta .insta_txt {
+  position: absolute;
+  padding: 30px 30px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.list_insta .insta_txt p {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.layer_pop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.layer_pop.on {
+  display: block;
+}
+
+.layer_pop .layer_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.layer_pop .layer_btn_close {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #555;
+  color: #fff;
+}
+
+.insta_pop {
+  margin-top: 50px;
+  padding: 40px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.insta_pop a {
+  color: #386dff;
+  text-decoration: underline;
+}
+
+.linkText {
+  display: block;
+  margin-top: 20px;
+}
+
+.moveLink {
+  display: block;
+  color: #386dff;
+}
+
+.more {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 50px;
+  width: 80%;
+  background: #ccc;
+  border-radius: 32px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+.more:hover {
+  background: #ccc;
+  color: #333;
+}
+
+.more:active {
+  background: -webkit-gradient(linear, left top, right top, from(#b025bc), color-stop(50%, #7de6f2), to(#ed2f71));
+  background: linear-gradient(to right, #b025bc 0%, #7de6f2 50%, #ed2f71 100%);
+  color: #fff;
+  font-weight: 600;
+}
+
+@media all and (max-width: 1400px) {
+  .list_insta li {
+    width: 25%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .list_insta li {
+    width: 33.33%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .layer_pop .layer_inner {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .list_insta li > a {
+    height: 215px;
+  }
+  .insta_pop {
+    padding: 15px;
+  }
+}
+
+@media all and (max-width: 414px) {
+  .list_insta li {
+    width: 50%;
+  }
+  .list_insta .insta_txt p {
+    -webkit-line-clamp: 8;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .list_insta li {
+    width: 50%;
+  }
+  .list_insta li > a {
+    height: 195px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

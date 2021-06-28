@@ -1,0 +1,128 @@
+.list_insta {
+  &::after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+  li{
+    float: left;
+    width:16.66%;
+    background: $color-black-opacity3;
+    &:nth-child(2n){
+      background: $color-black-opacity3;
+    }
+    &>a{
+      display:block;
+      position: relative;
+      width:100%;
+      height:266px;
+      overflow: hidden;
+      &>img{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%); 
+        width:100%;
+      }
+      &:hover .insta_txt, &:focus .insta_txt{
+        opacity: 1;
+      }
+    }
+  }
+
+  .insta_txt{
+    position: absolute;
+    padding:30px 30px; 
+    width:100%;
+    height:100%;
+    background:$color-black-opacity8;
+    color:$color-white;
+    font-size:14px;
+    line-height: 18px;
+    opacity: 0; 
+    transition:opacity 0.3s;
+    p{
+      text-overflow:ellipsis;
+      display:-webkit-box;
+      -webkit-line-clamp: 11;
+      -webkit-box-orient:vertical;
+      word-wrap:break-word;
+      overflow: hidden;
+    }
+  }
+}
+
+.layer_pop{
+  display:none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:$color-black-opacity5;
+  z-index: 1;
+  &.on{
+    display:block;
+  }
+  .layer_inner{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%); 
+    width:700px;
+    height:700px;
+    background:$color-white;
+    overflow-y:auto;
+  }
+  
+  .layer_btn_close{
+    display:inline-block;
+    padding:10px 20px;
+    background:$color-grey-dark;
+    color:$color-white;
+  }
+}
+
+
+.insta_pop{
+  margin-top:50px;
+  padding:40px;
+  font-size:16px;
+  line-height: 24px;
+  & a{
+    color:$color-blue;
+    text-decoration: underline;
+  }
+}
+.linkText{
+  display:block;
+  margin-top:20px;
+}
+.moveLink{
+  display:block;
+  color:$color-blue;
+}
+
+
+.more{
+  display:block;
+  margin:30px auto;
+  padding:10px 50px;
+  width:80%;
+  background:$color-grey-light;
+  border-radius: 32px;
+  color:$color-grey;
+  font-size:16px;
+  text-align: center;
+  &:hover{
+    background:$color-grey-light;
+      color:$color-grey;
+  }
+  &:active{
+    background: linear-gradient(to right,  #b025bc 0%,#7de6f2 50%,#ed2f71 100%);
+    color:$color-white;
+    font-weight: 600;
+  }
+}
+
+

@@ -1,0 +1,54 @@
+.list_insta li{float: left;width:16.66%;background: rgba(0,0,0,0.3);}
+.list_insta li:nth-child(2n){background: rgba(0,0,0,0.2);}
+
+
+.list_insta li>a{display:block;position: relative; width:100%;height:266px;overflow: hidden;}
+.list_insta li>a>img{position: absolute;top:50%;left:50%;transform: translate(-50%,-50%); width:100%;}
+
+.list_insta .insta_txt{position: absolute;padding:30px 30px; width:100%;height:100%;background:rgba(0,0,0,0.8);color:#fff;font-size:14px;line-height: 18px;opacity: 0; transition:opacity 0.3s;}
+.list_insta .insta_txt p{text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp: 11;-webkit-box-orient:vertical;word-wrap:break-word;overflow: hidden;
+}
+.list_insta li>a:hover .insta_txt,.list_insta li>a:focus .insta_txt{opacity: 1;}
+
+/* 레이어팝업 */
+.layer_pop{display:none;position: fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index: 1;}
+.layer_pop.on{display:block;}
+.layer_inner{position: absolute;top:50%;left:50%;transform:translate(-50%,-50%); width:700px;height:700px;background:#fff;overflow-y:auto;}
+.layer_btn_close{display:inline-block;padding:10px 20px;background:#555;color:#fff;}
+
+.insta_pop{margin-top:50px;padding:40px;font-size:16px;line-height: 24px;}
+.linkText{display:block;margin-top:20px;}
+.moveLink{display:block;color:rgb(56, 109, 255)}
+.insta_pop a{color:rgb(56, 109, 255);text-decoration: underline;}
+
+.more{display:block;margin:30px auto;padding:10px 50px;width:80%;background:rgb(226, 226, 226);border-radius: 32px;color:#333;font-size:16px;text-align: center;}
+.more:hover{background:#ccc;color:#333;}
+.more:active{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b025bc+0,7de6f2+50,ed2f71+100 */
+  background: #b025bc; /* Old browsers */
+  background: -moz-linear-gradient(left,  #b025bc 0%, #7de6f2 50%, #ed2f71 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #b025bc 0%,#7de6f2 50%,#ed2f71 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #b025bc 0%,#7de6f2 50%,#ed2f71 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b025bc', endColorstr='#ed2f71',GradientType=1 ); /* IE6-9 */
+  color:#fff;font-weight: 600;}
+
+@media all and (max-width:1400px){
+  .list_insta li{width:25%;}
+}
+@media all and (max-width:1024px){
+  .list_insta li{width:33.33%;}
+}
+@media all and (max-width:700px){
+  .layer_inner{width:100%;}
+}
+@media all and (max-width:640px){
+  .list_insta li>a{height:215px;}
+  .insta_pop{padding:15px;}
+}
+@media all and (max-width:414px){
+  .list_insta li{width:50%;}
+  .list_insta .insta_txt p{-webkit-line-clamp:8}
+}
+@media all and (max-width:375px){
+  .list_insta li{width:50%;}
+  .list_insta li>a{height:195px}
+}
